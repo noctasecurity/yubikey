@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Abre a interface gráfica do simulador (Tk).
-cd "$(dirname "$0")"
-exec .venv/bin/python -m yksim.gui "$@"
+# Abre o simulador na janela Qt (a interface atual). Igual ao comando `yubikey`; aceita as mesmas opções.
+exec "$(dirname "$(readlink -f "$0")")/bin/yubikey" "$@"

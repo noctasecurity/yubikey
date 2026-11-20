@@ -14,7 +14,7 @@
     <rect x="30" y="100" width="160" height="40" rx="8" fill="#fff" stroke="#c9ced6"/>
     <text x="110" y="125" text-anchor="middle">OpenSC / pkcs11-tool</text>
     <rect x="30" y="150" width="160" height="40" rx="8" fill="#fff" stroke="#c9ced6"/>
-    <text x="110" y="175" text-anchor="middle">PRIS e outros apps</text>
+    <text x="110" y="175" text-anchor="middle">Seus aplicativos</text>
     <rect x="30" y="200" width="160" height="40" rx="8" fill="#fff" stroke="#c9ced6"/>
     <text x="110" y="225" text-anchor="middle">tests/app_cliente.py</text>
   </g>

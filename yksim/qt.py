@@ -440,7 +440,7 @@ def _stylesheet() -> str:
                              border: 1px solid {LINE}; }}
         QPushButton#small:hover {{ border-color: {y}; }}
         QPushButton#small:disabled, QComboBox:disabled {{ color: {MUTED}; border-color: {LINE}; }}
-        QPushButton:focus {{ outline: none; border: 1px solid {y}; }}
+        QPushButton#small:focus, QPushButton#primary:focus {{ outline: none; border: 1px solid {y}; }}
         QCheckBox::indicator {{ width: 14px; height: 14px; border: 1px solid {MUTED}; border-radius: 3px;
                                 background: {BG}; }}
         QCheckBox::indicator:checked {{ background: {y}; border-color: {y}; }}

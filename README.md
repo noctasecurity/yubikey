@@ -10,7 +10,7 @@ Serve para desenvolver e testar sistemas que dependem de YubiKey sem precisar de
 pessoa ou para cada máquina de CI: gerar chaves nos slots, verificar PIN e PUK, bloquear PIN, assinar desafios
 e simular o **toque** no disco dourado.
 
-![Janela do yksim](docs/img/janela-qt.png)
+![Janela do yksim](docs/img/janela.png)
 
 ## O que ele faz
 
@@ -45,8 +45,9 @@ yubikey --stop       # fecha o simulador
 .venv/bin/ykman list # confere que a chave virtual aparece
 ```
 
-O manual completo, com a arquitetura e um exemplo de aplicação cliente, está em
-[`docs/yksim-manual.pdf`](docs/yksim-manual.pdf).
+O manual completo, com a arquitetura, tutoriais, o app cliente de teste e a solução de problemas, está em
+[`docs/MANUAL.md`](docs/MANUAL.md) e, para imprimir ou ler offline, em [`docs/yksim-manual.pdf`](docs/yksim-manual.pdf)
+(refaça com `python3 docs/gerar_pdf.py`).
 
 ## Testes
 

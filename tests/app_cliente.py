@@ -2,7 +2,7 @@
 
     python3 tests/app_cliente.py
 
-Fala com a chave só pelo PC/SC (pcscd), igual ao ykman e ao PRIS, então serve para conferir o yksim de ponta a
+Fala com a chave só pelo PC/SC (pcscd), igual ao ykman e a um aplicativo de verdade, então serve para conferir o yksim de ponta a
 ponta: abra o simulador (`yubikey`), deixe-o ligado e use este app.
 
 1. Procurar: lista as YubiKeys visíveis (serial e firmware).

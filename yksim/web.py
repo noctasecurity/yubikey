@@ -49,8 +49,17 @@ def make_handler(ctrl: Controller):
             self.send_header("Content-Type", ctype)
             self.send_header("Content-Length", str(len(body)))
             self.send_header("Cache-Control", "no-store")
+            self._security_headers()
             self.end_headers()
             self.wfile.write(body)
+
+        def _security_headers(self) -> None:
+            # Contra clickjacking: nenhum site pode carregar a interface num frame e induzir um clique no disco
+            # (um toque aprovado sem querer) ou no LIGAR.
+            self.send_header("X-Frame-Options", "DENY")
+            self.send_header("Content-Security-Policy", "frame-ancestors 'none'")
+            self.send_header("X-Content-Type-Options", "nosniff")
+            self.send_header("Referrer-Policy", "no-referrer")
 
         def _json(self, obj, code: int = 200) -> None:
             self._send(code, json.dumps(obj).encode(), "application/json")
@@ -109,6 +118,7 @@ def make_handler(ctrl: Controller):
             self.send_header("Content-Type", "text/event-stream")
             self.send_header("Cache-Control", "no-store")
             self.send_header("Connection", "keep-alive")
+            self._security_headers()
             self.end_headers()
             last_log = 0
             version = -1
